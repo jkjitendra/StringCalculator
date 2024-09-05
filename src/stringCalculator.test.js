@@ -42,4 +42,9 @@ describe('StringCalculator', () => {
     expect(calculator.add("2,1001")).toBe(2);
   });
 
+  test('should support delimiters of any length', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add("//[***]\n4***2***3")).toBe(9);
+  });
+
 });
