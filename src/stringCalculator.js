@@ -12,7 +12,13 @@ class StringCalculator {
     }
 
     const sanitizedNumbers = numbers.replace(/\n/g, delimiter);
-    return sanitizedNumbers.split(delimiter).reduce((sum, num) => sum + parseInt(num, 10), 0);
+    const numArray = sanitizedNumbers.split(delimiter).map(num => parseInt(num, 10));
+
+    const negatives = numArray.filter(num => num < 0);
+    if (negatives.length > 0) {
+      throw new Error(`negatives not allowed: ${negatives.join(', ')}`);
+    }
+    return numArray.reduce((sum, num) => sum + num, 0);
   }
 }
 
