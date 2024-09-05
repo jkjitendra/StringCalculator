@@ -17,4 +17,9 @@ describe('StringCalculator', () => {
     expect(calculator.add("12,13")).toBe(25);
   });
 
+  test('should handle any amount of numbers', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add("1,2,3,4,5")).toBe(15);
+  });
+
 });
