@@ -1,0 +1,15 @@
+{
+  "name": "stringcalculator",
+  "version": "1.0.0",
+  "description": "A TDD (Test-Driven Development) exercise to implement a simple String Calculator in JavaScript. The calculator supports addition of numbers provided in a string format, with custom delimiters, handling of new lines, and various other rules. This project demonstrates the TDD process with incremental commits for each feature.",
+  "main": "stringCalculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
