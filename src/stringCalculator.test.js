@@ -12,4 +12,9 @@ describe('StringCalculator', () => {
     expect(calculator.add("12")).toBe(12);
   });
 
+  test('should return the sum of two numbers separated by a comma', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add("12,13")).toBe(25);
+  });
+
 });
