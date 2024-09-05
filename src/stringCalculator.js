@@ -3,7 +3,8 @@ class StringCalculator {
     if (numbers === "") {
       return 0;
     } else {
-      return numbers.split(",").reduce((sum, num) => sum + parseInt(num, 10), 0);
+      const sanitizedNumbers = numbers.replace(/\n/g, ',');
+      return sanitizedNumbers.split(",").reduce((sum, num) => sum + parseInt(num, 10), 0);
     }
   }
 }
